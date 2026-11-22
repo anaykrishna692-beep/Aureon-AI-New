@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="Aureon AI - One platform, many AI models">
+
+  <title>Aureon AI</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">✦ AUREON AI</div>
+    <button id="menuBtn" aria-label="Open account">☰</button>
+  </header>
+
+  <main>
+
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="orb">✦</div>
+        <h1>Welcome to <span>Aureon AI</span></h1>
+        <p>One platform. Many AI models.</p>
+        <button class="primary-btn" onclick="showScreen('chat')">
+          Start Chatting
+        </button>
+      </div>
+
+      <div class="features">
+        <div class="feature-card">
+          <h3>✧ Smart AI Chat</h3>
+          <p>Explore ideas and ask questions.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>⚡ Multiple AI Models</h3>
+          <p>Access models from different providers.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>✎ Creativity</h3>
+          <p>Learn, write and create.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat" class="screen">
+      <h2>Chat with Aureon</h2>
+
+      <label for="modelMode">Choose your AI mode</label>
+      <select id="modelMode">
+        <option value="auto">Automatic</option>
+        <option value="manual">Manual</option>
+      </select>
+
+      <div id="manualModelArea" hidden>
+        <label for="modelSelect">Choose a model</label>
+        <select id="modelSelect">
+          <option value="">Models will load later</option>
+        </select>
+      </div>
+
+      <div id="messages" class="messages">
+        <div class="message ai">
+          Hello! I'm Aureon AI. How can I help?
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Message Aureon AI..."
+          maxlength="4000"
+          required
+        >
+        <button type="submit">➤</button>
+      </form>
+
+      <p id="connectionStatus" class="notice">
+        Welcome to Aureon AI.
+      </p>
+    </section>
+
+    <section id="plans" class="screen">
+      <h2>Aureon AI Plans</h2>
+
+      <div class="feature-card">
+        <h3>Normal — Free</h3>
+        <p>Basic access.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Go</h3>
+        <p>Coming soon.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Pro</h3>
+        <p>Coming soon.</p>
+      </div>
+    </section>
+
+    <section id="account" class="screen">
+      <h2>Your Account</h2>
+
+      <div class="feature-card">
+        <p>Account registration will be added in a later step.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <button onclick="showScreen('home')">⌂<span>Home</span></button>
+    <button onclick="showScreen('chat')">✧<span>Chat</span></button>
+    <button onclick="showScreen('plans')">♢<span>Plans</span></button>
+    <button onclick="showScreen('account')">♙<span>Account</span></button>
+  </nav>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
